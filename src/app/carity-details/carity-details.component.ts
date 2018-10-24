@@ -43,8 +43,9 @@ export class CarityDetailsComponent implements OnInit {
     this.charityService
     .getCharity(charityId)
     .pipe(
-    finalize(() => {
-      this.isLoading = false
+      finalize(() => {
+        setTimeout(() => this.isLoading = false, 1000);
+      // this.isLoading = false
       })
     )
     .subscribe((charity: any) => {
