@@ -1,6 +1,6 @@
 # Sandiso Toto Charity App
 
-This is a charity angular app to demonstrate how to use RXJS, EventEmitters, Reusable components and other angular 2,4,5,6 + awesome modules
+This is a charity angular app to demonstrate how to use RXJS, EventEmitters, Reusable components and other angular 2,4,5,6+ awesome modules
 
 # Getting started
 
