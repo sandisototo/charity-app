@@ -1,0 +1,79 @@
+<div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="..." style="margin-top:-1%">
+  <div class="btn-group" role="group" *ngFor="let tab of tabs; index as i">
+    <button type="button" id="newest" class="nav button-tabs btn btn-default" (click)="selectTab(i+1)" [ngClass]="{active: activeTab(i+1)}">
+      {{tab}}
+    </button>
+  </div>
+</div>
+<div class="tab-content">
+  <div class="tab-pane fade in active" *ngIf="tab === 1">
+    <div class="addon"  *ngIf="currentPage==='home'">
+      <ul>
+        <li class="clearfix" *ngFor="let charity of charities" (click)="viewDetails(charity.id)">
+          <img class="rounded-circle round img-thumbnail" src="https://i.imgur.com/BK7wL0d.jpg">
+          <div class="row">
+            <div class="col-10 far-end-section">
+              <div class="legend-info">
+                {{charity.title}}
+                <br />
+                <span style="text-transform: uppercase; color: grey">
+                  Raising R{{charity.amountRequired}} by {{readableDate(charity.dueDate)}}
+                </span>
+                <br />
+                <strong style="font-size: small;">{{charity.organisation.name}}, {{charity.organisation.location}}</strong>
+                <span class="badge badge-default badge-labeled">1 Day remaining | 24% raised</span>
+              </div>
+            </div>
+
+            <div class="col-2 pull-right green" [hidden]="!charity.hasDonated">
+              Donate again <br> <i class="far fa-1x fa-smile"></i>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="addon"  *ngIf="currentPage==='details'" style="padding: 10px;">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed molestie ut sem et mollis. Phasellus sit amet ullamcorper diam. 
+        Quisque finibus felis est, sed fermentum ex laoreet ut. 
+        <ul class="">
+          <li>Sed sodales eget eros ac tempor. </li>
+          <li>Praesent malesuada blandit felis ac vulputate. Vestibulum neque erat, fringilla non laoreet eu, feugiat in mi. </li>
+           <li>Nam consectetur mauris nec ex vehicula, ut efficitur turpis blandit. Suspendisse ultrices hendrerit faucibus. </li>
+          <li>Integer pretium nulla vitae mollis posuere. Mauris maximus pellentesque enim rhoncus hendrerit.</li>
+        </ul>
+        <img src="http://placehold.it/1200x400" alt="header" style="width:100%;" >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+        Sed molestie ut sem et mollis. Phasellus sit amet ullamcorper diam. 
+        Quisque finibus felis est, sed fermentum ex laoreet ut.
+        <div style="padding: 10px;">
+            <button type="button" class="btn btn-success btn-block" (click)="donateForm()">Donate</button>
+        </div>
+
+        <div class="row" *ngIf="donationFormActive">
+          <hr>
+            <div class="col-xs-12">
+                <div class="form-wrap" style="text-align: center;">
+                  <h4>Please insert the amount you want to donate with</h4>
+                      <form role="form" action="javascript:;" method="post" id="login-form" autocomplete="off">
+                          <div class="form-group">
+                              <p *ngIf="amount"> R {{amount}}</p>
+                              <p *ngIf="!amount">R0.00</p>
+                              <input type="number" name="amount" id="amount" class="form-control" placeholder="R1000" [(ngModel)]="amount">
+                          </div>
+                          <input type="submit" id="btn-submit" class="btn btn-primary btn-sm" value="Submit" (click)="donate()">
+                      </form>
+                </div>
+          </div> <!-- /.col-xs-12 -->
+        </div> 
+        
+      </div>
+      
+  </div>
+  <div class="fade in" *ngIf="tab === 2">
+    <h3>This is tab 2</h3>
+  </div>
+  <div class="fade in" *ngIf="tab === 3">
+    <h3>This is tab 3</h3>
+  </div>
+</div>

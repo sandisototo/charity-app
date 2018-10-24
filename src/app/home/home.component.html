@@ -1,0 +1,10 @@
+<h4>Featured Charity</h4>
+<app-header [header]="'home'"></app-header>
+<div class="clearfix my-lg-4">
+    <div *ngIf="charities">
+        <app-tabs [tabs]="tabs" [hidden]="isLoading" [charities]="charities" (onSelectCharity)="viewDetails($event)"></app-tabs>
+    </div>
+</div>
+<div style="text-align: center; padding: 50px;">
+  <app-loader [isLoading]="isLoading"></app-loader>
+</div>

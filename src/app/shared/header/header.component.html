@@ -1,0 +1,37 @@
+<img class="d-block w-100" src="assets/home.jpeg" alt="header" *ngIf="header==='home'">
+<div class="carousel-inner" *ngIf="header==='details'" style="margin-bottom: 0px;">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="http://placehold.it/1200x600" alt="header" style="width:100%;" class="img-responsive">
+            <div class="carousel-caption">
+                <h4><i class="far fa-3x fa-image" style="margin-right:5px;"></i>{{charity.title}}</h4>
+               
+                <div class="progress">
+                    <div class="progress-bar progress-bar-success" [ngStyle]="{'width': percentageStyle}">{{percentage}}%</div>
+                </div>
+                <div class="row">
+                        <div class="col">
+                         R{{charity.amountRequired}}
+                        </div>
+                        <div class="col-6">
+                         {{daysToGo(charity.dueDate)}}
+                        </div>
+                        <div class="col">
+                            {{charity.contributorCount}}
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col">
+                         Goal
+                        </div>
+                        <div class="col-5">
+                         Day to go
+                        </div>
+                        <div class="col">
+                         Contributors
+                      </div>
+            </div>
+        </div>
+    </div>
+</div>
+             

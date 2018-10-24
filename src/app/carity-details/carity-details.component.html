@@ -1,0 +1,11 @@
+<div *ngIf="charity">
+    <app-header [header]="'details'" [charity]="charity"></app-header>
+</div>
+<div class="clearfix my-lg-4">
+    <div *ngIf="charity">
+        <app-tabs [tabs]="tabs" [hidden]="isLoading" [charity]="charity"></app-tabs>
+    </div>
+</div>
+<div style="text-align: center; padding: 50px;">
+  <app-loader [isLoading]="isLoading"></app-loader>
+</div>

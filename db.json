@@ -1,0 +1,54 @@
+{
+    "organisations": [
+        {
+            "id": 1,
+            "name": "Free-a-child",
+            "location": "Cape Town"
+        },
+        {
+            "id": 2,
+            "name": "Drought Fund",
+            "location": "Durban"
+        },
+        {
+            "id": 3,
+            "name": "SPCA",
+            "location": "Johannesburg"
+        }
+    ],
+    "charities": [
+        {
+            "id": 1,
+            "title": "Feed 60 kids for a month",
+            "amountRequired": 30000,
+            "amountRaised": 15000,
+            "dueDate": "27-11-2018",
+            "totalRaised": 0,
+            "hasDonated": false,
+            "contributorCount": 100,
+            "organisationId": 1
+        },
+        {
+            "id": 2,
+            "title": "Buy 5000 Blankets",
+            "amountRequired": 8000,
+            "amountRaised": 5000,
+            "dueDate": "27-11-2018",
+            "totalRaised": 0,
+            "hasDonated": true,
+            "contributorCount": 250,
+            "organisationId": 2
+        },
+        {
+            "id": 3,
+            "title": "Sponsor a farm with 1000 li..",
+            "amountRequired": 30000,
+            "amountRaised": 17000,
+            "dueDate": "27-11-2018",
+            "totalRaised": 0,
+            "hasDonated": false,
+            "contributorCount": 300,
+            "organisationId": 3
+        }
+    ]
+}

@@ -1,0 +1,111 @@
+
+.button-tabs {
+    padding: 15px;
+  }
+  
+  .profile-pic {
+    width: 50px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .img-thumbnail{
+    height:50px!important;
+  }
+  
+  .addon {
+    background: #fff;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    }
+    
+    .addon li {
+    padding: 10px;
+    border-top: 1px solid #eee;
+    overflow: hidden;
+    }
+    .addon li {
+    list-style:none;
+    }
+    
+    .clearfix {
+    display: block;
+    }
+    .clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    overflow: hidden;
+    }
+    
+    li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+    } ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    }
+     ul {
+    list-style: none;
+    }
+    .round {
+    border-radius:100%;
+      display: block;
+    height: 48px;
+    width: 49px;
+    float: left;
+    }
+  
+    .addon p {
+    padding: 10px 15px;
+    margin: 0;
+    font: 600 16px/22px "myriad-pro",Arial,"Helvetica Neue",Helvetica,sans-serif;
+    }
+  
+    p {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    }
+    
+    .addon li .legend-info {
+    float: left;
+    margin-left: 10px;
+    width: 155px;
+    white-space: nowrap;
+    }
+    
+    .addon strong {
+    display: block;
+    margin: 0 0 4px;
+    }
+    
+    strong {
+    font-weight: bold;
+    }
+  
+    .well{
+      padding: 19px !important;
+    }
+  
+    .far-end-section {
+      height: 100%;
+    }
+    .green {
+      background-color: #4dda2b;
+      color: white;
+      padding-right: 5px;
+      padding-top: 20px;
+      padding-left: 6px;
+      text-align: -webkit-center;
+      font-size: x-small;
+    }
