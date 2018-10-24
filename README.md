@@ -27,7 +27,8 @@ Task automation is based on [NPM scripts](https://docs.npmjs.com/misc/scripts).
 Tasks                         | Description
 ------------------------------|---------------------------------------------------------------------------------------
 npm start                     | Run development server on `http://localhost:4200/`
-npm run build [-- --env=prod] | Lint code and build app for production in `dist/` folder
+npm run build [-- --env=prod] | Build app for production in `dist/` folder
+json-server --watch db.json   | Run mock api server on `localhost:3000` data can be found or edited in `db.json`
 
 When building the application, you can specify the target environment using the additional flag `--env <name>` (do not
 forget to prepend `--` to pass arguments to npm scripts).
